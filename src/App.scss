@@ -14,9 +14,19 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
 }
 * {
   box-sizing: border-box;
+}
+.norm-button {
+  -webkit-appearance: none;
+  padding: unset;
+  border: unset;
+  background-color: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
 }
 img {
   max-width: 100%;
@@ -54,6 +64,13 @@ img {
 %heb, .heb {
   direction: rtl;
 }
+.grid {
+  display: grid;
+  > * {
+    min-height: 0;
+    min-width: 0;
+  }
+}
 .template-main-sidebar {
   display: grid;
   height: 100%;
@@ -68,6 +85,9 @@ img {
 }
 .fs-main-title {
   font-size: 7rem;
+}
+.fs-title {
+  font-size: 3rem;
 }
 .fw-bold {
   font-width: 600;
@@ -97,6 +117,8 @@ img {
   margin: auto;
   padding: 2rem;
   border-radius: 1rem;
+  @extend .grid;
+  grid-template-rows: auto 1fr auto;
 }
 .slider {
   @extend %h-full;
@@ -126,4 +148,19 @@ img {
   @extend %heb;
   @extend %h-full;
   overflow: hidden;
+}
+.slider-button {
+  width: 2rem;
+  aspect-ratio: 1;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  &.next {
+    width: 5rem;
+  }
+}
+.cateogry {
+  @extend .heb;
+  height: 3rem;
 }

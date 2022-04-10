@@ -2,7 +2,7 @@ import React from "react";
 import styles from './Welcome.module.scss';
 
 export default function Welcome(){
-    return                 <div className={"align-xy flex-column"}>
+    return <div style={{textAlign: "center"}}>
         <h1 className={styles.Intro}>
             אדם סופר
         </h1>

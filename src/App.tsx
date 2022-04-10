@@ -3,12 +3,19 @@ import './App.scss';
 import Slider from "react-slick";
 import Welcome from "./slides/Welcome/Welcome";
 import BackGroundMasonry from "./parts/BackGroundMasonry/BackGroundMasonry";
-import {Slide1Birth, Slide2Birth, Slide3Birth, Slide4Birth} from "./slides/Slide1Birth/Slide1Birth";
+import {Slide1Birth, Slide2Birth, Slide3Birth, Slide4Birth} from "./slides/SlideBirth/Slide1Birth";
+import {SlideBestFriends1} from "./slides/SlideBestFriends/SlideBestFriends";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 declare module 'react-slick';
-type Categories = "welcome" | "early_childhood";
+
+
+type Categories = "welcome" | "early_childhood" | "best_friends";
 const categories: Record<Categories, string> = {
     welcome: "",
     early_childhood:"ההתחלה",
+    best_friends: "החברים הכי טובים",
 }
 interface Slide {
     category: Categories;
@@ -34,6 +41,10 @@ const slides: Slide[] = [
     {
         category: "early_childhood",
         component: <Slide4Birth/>,
+    },
+    {
+        category: "best_friends",
+        component: <SlideBestFriends1/>,
     },
 ]
 function* make(direction: [0|1|-1]){
@@ -84,9 +95,9 @@ function App() {
                     </Slide>
                 })}
             </Slider>
-            <footer>
-                <button onClick={handleNext}>next</button>
-                <button onClick={handlePrev}>prev</button>
+            <footer className={"align-y gap-1"}>
+                <button className={"norm-button slider-button next"} onClick={handleNext}><ArrowBackIcon/></button>
+                <button className={"norm-button slider-button prev"} onClick={handlePrev}><ArrowForwardIcon/></button>
             </footer>
         </MainPanel>
         <BackGroundMasonry/>
@@ -96,7 +107,7 @@ function App() {
 
 export function CategoryLabel(props: {category: Categories}){
     const {category} = props;
-    return <div>{categories[category]}</div>
+    return <div className={"cateogry"}><div className={"fs-title"}>{categories[category]}</div></div>
 }
 
 export function MainPanel({children}: PropsWithChildren<unknown>){
