@@ -1,3 +1,128 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+body, html, .App, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans Hebrew', serif;
+  line-height: 0.9;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+* {
+  box-sizing: border-box;
+}
 img {
   max-width: 100%;
+}
+%spread {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+%h-full, .h-full {
+  height: 100%;
+}
+%flex-column, .flex-column {
+  display: flex;
+  flex-direction: column;
+}
+%align-xy, .align-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%align-y, .align-y {
+  display: flex;
+  align-items: center;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+%heb, .heb {
+  direction: rtl;
+}
+.template-main-sidebar {
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto 1fr;
+  img {
+    max-height: 100%;
+  }
+  > * {
+    min-height:0;
+    min-width: 0;
+  }
+}
+.fs-main-title {
+  font-size: 7rem;
+}
+.fw-bold {
+  font-width: 600;
+  b, strong {
+    font-width: 800;
+  }
+}
+.fw-bolder {
+  font-width: 800;
+}
+.background {
+  @extend %spread;
+  z-index: -1;
+}
+.loader {
+  @extend %spread;
+  @extend %align-xy;
+  @extend %heb;
+  z-index: 20;
+  background-color: #ffffff;
+}
+.panel {
+  position: relative;
+  background-color: rgba(coral, 0.7);
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.slider {
+  @extend %h-full;
+  padding-bottom: 60px;
+  position: relative;
+  button {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
+  .slick-prev {
+    transform: translateX(-100%);
+  }
+  .slick-next {
+    transform: translateX(100%);
+  }
+  div {
+    height: 100%;
+  }
+}
+.slide {
+  @extend %heb;
+  @extend %h-full;
 }
