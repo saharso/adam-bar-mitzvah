@@ -125,4 +125,5 @@ img {
 .slide {
   @extend %heb;
   @extend %h-full;
+  overflow: hidden;
 }
