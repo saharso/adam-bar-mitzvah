@@ -51,6 +51,10 @@ img {
   justify-content: center;
   align-items: center;
 }
+.stretch {
+  flex-grow: 1;
+  width: 0;
+}
 %align-y, .align-y {
   display: flex;
   align-items: center;
@@ -86,6 +90,9 @@ img {
 .fs-main-title {
   font-size: 7rem;
 }
+.fs-title-medium {
+  font-size: 5rem;
+}
 .fs-title {
   font-size: 3rem;
 }
@@ -118,6 +125,7 @@ img {
   padding: 2rem;
   border-radius: 1rem;
   @extend .grid;
+  gap: 1rem;
   grid-template-rows: auto 1fr auto;
 }
 .slider {

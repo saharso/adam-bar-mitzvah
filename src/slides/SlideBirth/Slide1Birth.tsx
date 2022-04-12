@@ -1,8 +1,9 @@
 import Masonry from "@mui/lab/Masonry";
+import adamBaby from './assets/adam_baby.jpeg';
 
 export function Slide1Birth(){
     return <div className={"h-full align-y gap-2 template-main-sidebar"}>
-        <img src={"https://lh3.googleusercontent.com/pw/AM-JKLUc_QsodXyW2D5xyVIPv-oWFZT-n09mgcxq60mGfEM2wn0h1JuHu3-qS6TMJuch9vM5Ae2EyVsJHfLAbOGkmqw83TLfwhoZlx16e1FvTp93Ph-Mdrm8b7Y-Y-i1uBFldUVh7HzdG4l2dFVcFezArpSRXQ=w453-h604-no?authuser=0"}/>
+        <img src={adamBaby}/>
         <div className={"heb"}>
             <div className={"fs-main-title fw-bold"}>
                 בתאריך
@@ -19,21 +20,17 @@ export function Slide1Birth(){
 
 export function Slide2Birth(){
     return <div className={"h-full align-y gap-2 template-main-sidebar"}>
-        <img src={"https://lh3.googleusercontent.com/pw/AM-JKLUTenatzaa6McCxUeroZCWUvhDvc9ZrLIoHTpSljduQvFvQsvfbnlJBWYe_xfY2MkdYaAdKSnRu6zvyX7frXimqg4maBTuEqaiVvaaDslCo9ExhZuA1Fq-_Le6R2psI09Q6nwJbEwkgioFAc0h5bfyvzg=w720-h1280-no?authuser=0"}/>
+        <img src={"https://scontent.ftlv1-1.fna.fbcdn.net/v/t31.18172-8/321716_2832288770092_1843012676_o.jpg?_nc_cat=111&ccb=1-5&_nc_sid=2c4854&_nc_ohc=eM2HCGWNC7IAX_WK5a_&_nc_oc=AQleQ0bmsiLqhVrV4YHbDwFqKqc4nhtmiHUcstkmnMnNS-bIkwjxHuWtp0FYl08fFzY&_nc_ht=scontent.ftlv1-1.fna&oh=00_AT-j4cAS402HipiocFQPr05KO1n1mBmg2DofXyoZtaOc-Q&oe=627950B0"}/>
         <div className={"heb"}>
             <div className={"fs-main-title fw-bold"}>
-                מאז שהיה תינוק,
+                מאז שהיית תינוק ועד היום,
                 <br/>
-                הבנו שיש לנו עסק עם ילד חכם מאד, רגיש
-                ומלא בטוב לב ובנתינה.
+                נשארת אותו ילד חכם, מצחיק ורגיש
             </div>
         </div>
     </div>
 }
 const images1 = [
-    // in desert
-    "https://lh3.googleusercontent.com/pw/AM-JKLUeUIzYskJLHRNpefAr2IXMxG8RXRSfZ_58AIssmCp-c260VVf_CNoFboMXTo4ZCSkREcpBlX4gR1feWVEpFmKoeFmD1J1X0l53vmEdMeSb_KIHxV7QtNXDmjzGw2UqSSN2Yfek78PewUzvX8kO2JIHkg=w608-h1353-no?authuser=0",
-    // from facebook
     "https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.18169-9/484179_10150985222619441_477881152_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=nKS4GBcBWc8AX_LcQox&_nc_ht=scontent.ftlv1-1.fna&oh=00_AT_hGuGwaCAkoQarUb5GVIfNPmhWaFOIuysrS7ZMnnrrmw&oe=6276F73D",
     "https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.18169-9/223983_10150985222774441_1105123690_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=AlcKglXOskEAX98VpbM&tn=83uZ4njYR1l-MtaE&_nc_ht=scontent.ftlv1-1.fna&oh=00_AT93Pr9BXnTv2JMyUB06hYtZ0kAVJ-kq4b-9wT6fd2YVgg&oe=6277CD88",
     "https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.18169-9/184102_10150115684384441_780063_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=w3FP2YQNoBwAX84pUcR&_nc_ht=scontent.ftlv1-1.fna&oh=00_AT9neB9Ku1T59Bj1rSkZuKoNJ_DMM184tDdSQyApCztb3Q&oe=6279EE23",

@@ -4,11 +4,11 @@ import Slider from "react-slick";
 import Welcome from "./slides/Welcome/Welcome";
 import BackGroundMasonry from "./parts/BackGroundMasonry/BackGroundMasonry";
 import {Slide1Birth, Slide2Birth, Slide3Birth, Slide4Birth} from "./slides/SlideBirth/Slide1Birth";
-import {SlideBestFriends1} from "./slides/SlideBestFriends/SlideBestFriends";
+import {SlideBestFriends1, SlideBestFriends2} from "./slides/SlideBestFriends/SlideBestFriends";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-declare module 'react-slick';
+// declare module 'react-slick';
 
 
 type Categories = "welcome" | "early_childhood" | "best_friends";
@@ -46,6 +46,10 @@ const slides: Slide[] = [
         category: "best_friends",
         component: <SlideBestFriends1/>,
     },
+    {
+        category: "best_friends",
+        component: <SlideBestFriends2/>
+    }
 ]
 function* make(direction: [0|1|-1]){
     let counter = 0;
